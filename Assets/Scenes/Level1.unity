@@ -1349,7 +1349,7 @@ MonoBehaviour:
   startX: 10
   endX: 95
   minSpacing: 7
-  maxSpacing: 9
+  maxSpacing: 10
   minY: -1.5
   maxY: 1.5
   maxYChange: 2
@@ -10109,7 +10109,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.4252343, y: -3.4280784, z: 0}
-  m_LocalScale: {x: 1.176, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
