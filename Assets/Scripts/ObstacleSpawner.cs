@@ -26,6 +26,10 @@ public class ObstacleSpawner : MonoBehaviour
 
     [Tooltip("Max height difference between two gaps in a row, so it's never impossible.")]
     public float maxYChange = 2f;
+    
+    [Header("Collectibles")]
+    [Tooltip("How many collectibles to keep in the level. The rest are removed at random. -1 = keep all.")]
+    public int maxCollectibles = 6;
 
     void Start()
     {
@@ -52,5 +56,29 @@ public class ObstacleSpawner : MonoBehaviour
             lastY = y;
             x += Random.Range(minSpacing, maxSpacing);
         }
+
+        LimitCollectibles();
+    }
+
+    // Keeps only "maxCollectibles" collectibles, chosen at random, and removes the others.
+    void LimitCollectibles()
+    {
+        if (maxCollectibles < 0) return;
+
+        Collectible[] all = GetComponentsInChildren<Collectible>();
+        if (all.Length <= maxCollectibles) return;
+
+        // Shuffle the list
+        for (int i = all.Length - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            Collectible temp = all[i];
+            all[i] = all[j];
+            all[j] = temp;
+        }
+
+        // Remove everything after the first "maxCollectibles"
+        for (int i = maxCollectibles; i < all.Length; i++)
+            Destroy(all[i].gameObject);
     }
 }
