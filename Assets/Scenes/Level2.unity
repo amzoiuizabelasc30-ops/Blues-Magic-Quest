@@ -11264,8 +11264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   isFinalLevel: 1
-  winPanel: {fileID: 0}
-  winText: {fileID: 0}
+  winPanel: {fileID: 132863489}
+  winText: {fileID: 862497545}
   restartDelay: 0.5
 --- !u!4 &1708198354
 Transform:
