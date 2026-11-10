@@ -1347,6 +1347,9 @@ MonoBehaviour:
   obstaclePrefabs:
   - {fileID: 7973144158207557416, guid: f5945ce3fa2a0f449b51856102f092b7, type: 3}
   - {fileID: 7973144158207557416, guid: 643b2aa0c82e6744098aae314306ec33, type: 3}
+  mustAppearOnce:
+  - {fileID: 531656501480512601, guid: cb3484c00880a814f83cc0fcf55c3879, type: 3}
+  - {fileID: 7973144158207557416, guid: 9f57835aafa6b5d49af091cb8b69a0f3, type: 3}
   startX: 12
   endX: 88
   minSpacing: 6
